@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="web/index.html"><img src="image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="image/Logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -33,11 +33,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="web/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/room.html">Type Rooms</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="web/gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -52,7 +52,7 @@
         <div class="page-cover text-center">
             <h2 class="page-cover-tittle">Gallery</h2>
             <ol class="breadcrumb">
-                <li><a href="web/index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="active">Gallery</li>
             </ol>
         </div>
@@ -70,7 +70,7 @@
         <div class="row imageGallery1" id="gallery">
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/img/reception/reception1.jpg" alt="">
+                    <img src="web/image/img/reception/reception1.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/img/reception/reception1.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/img/rm/rm2.jpg" alt="">
+                    <img src="web/image/img/rm/rm2.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/img/rm/rm2.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -86,7 +86,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/img/wajah/depan.jpg" alt="">
+                    <img src="web/image/img/wajah/depan.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/img/wajah/depan.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -94,7 +94,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/img/rm/rm4.jpg" alt="">
+                    <img src="web/image/img/rm/rm4.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/img/rm/rm4.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -103,7 +103,7 @@
 
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/banner/delux/deluxe.jpg" alt="">
+                    <img src="web/image/banner/delux/deluxe.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/banner/delux/deluxe.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -111,7 +111,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/banner/delux/fasilitasdeluxe2.jpg" alt="">
+                    <img src="web/image/banner/delux/fasilitasdeluxe2.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/banner/delux/fasilitasdeluxe2.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -119,7 +119,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/banner/vip/fasilitasvip1.jpg" alt="">
+                    <img src="web/image/banner/vip/fasilitasvip1.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/banner/vip/fasilitasvip1.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -127,7 +127,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/banner/superior/fasilitassuperior3.jpg" alt="">
+                    <img src="web/image/banner/superior/fasilitassuperior3.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/banner/superior/fasilitassuperior3.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -135,7 +135,7 @@
             </div>
             <div class="col-md-4 gallery_item">
                 <div class="gallery_img">
-                    <img src="image/banner/superior/kamarsuperior.jpg" alt="">
+                    <img src="web/image/banner/superior/kamarsuperior.jpg" alt="">
                     <div class="hover">
                         <a class="light" href="web/image/banner/superior/kamarsuperior.jpg"><i class="fa fa-expand"></i></a>
                     </div>
@@ -211,19 +211,19 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="vendors/isotope/isotope-min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="web/js/jquery-3.2.1.min.js"></script>
+<script src="web/js/popper.js"></script>
+<script src="web/js/bootstrap.min.js"></script>
+<script src="web/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="web/js/jquery.ajaxchimp.min.js"></script>
+<script src="web/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="web/vendors/nice-select/js/jquery.nice-select.js"></script>
+<script src="web/js/mail-script.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="web/vendors/isotope/isotope-min.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="web/js/custom.js"></script>
 </body>
 </html>

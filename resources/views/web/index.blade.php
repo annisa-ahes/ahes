@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="web/index.html"><img src="web/image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -33,11 +33,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="web/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/room.html">Type Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="web/contact.html">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -141,16 +141,16 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img src="image/banner/superior/kamarsuperior.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <img src="web/image/banner/superior/kamarsuperior.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
                         <a href="#" class="btn theme_btn button_hover">Book Now</a>
                     </div>
                     <div class="d-flex justify-content-between facilitas-show">
                         <div class="details-container">
-                            <img src="image/check-square.svg" alt="tick" class="list-icon">
+                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
                         </div>
                         <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK MANDI','success',true,true,'pageMessages1');">
-                            <img src="image/svgviewer-output.svg" alt="tick" class="list-icon">
+                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">Show Facilities</p>
                         </div>
                     </div>
@@ -164,16 +164,16 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img src="image/banner/delux/deluxedoubel.jpg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <img src="web/image/banner/delux/deluxedoubel.jpg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
                         <a href="#" class="btn theme_btn button_hover">Book Now</a>
                     </div>
                     <div class="d-flex justify-content-between facilitas-show">
                         <div class="details-container">
-                            <img src="image/check-square.svg" alt="tick" class="list-icon">
+                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
                         </div>
                         <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages2');">
-                            <img src="image/svgviewer-output.svg" alt="tick" class="list-icon">
+                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">Show Facilities</p>
                         </div>
                     </div>
@@ -187,16 +187,16 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img src="image/banner/vip/fasilitasvip.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <img src="web/image/banner/vip/fasilitasvip.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
                         <a href="#" class="btn theme_btn button_hover">Book Now</a>
                     </div>
                     <div class="d-flex justify-content-between facilitas-show">
                         <div class="details-container">
-                            <img src="image/check-square.svg" alt="tick" class="list-icon">
+                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
                         </div>
                         <div class="details-container" id="facilitas" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC HOT WATER REFRIGERATOR / KULKAS TV CHANEL WASTAPEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages3');">
-                            <img src="image/svgviewer-output.svg" alt="tick" class="list-icon">
+                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
                             <p class="list-text" style="font-size: 13px;">Show Facilities</p>
                         </div>
                     </div>
@@ -277,7 +277,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-fluid" src="image/img/slider/bangunan2.JPG" alt="img" style="box-shadow: 0px 1px 10px black;">
+                <img class="img-fluid" src="web/image/img/slider/bangunan2.JPG" alt="img" style="box-shadow: 0px 1px 10px black;">
             </div>
 
         </div>
@@ -294,7 +294,7 @@
         </div>
         <div class="testimonial_slider owl-carousel">
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -308,7 +308,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -322,7 +322,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -336,7 +336,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -419,18 +419,18 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="web/js/jquery-3.2.1.min.js"></script>
+<script src="web/js/popper.js"></script>
+<script src="web/js/bootstrap.min.js"></script>
+<script src="web/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="web/js/jquery.ajaxchimp.min.js"></script>
+<script src="web/js/mail-script.js"></script>
+<script src="web/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="web/vendors/nice-select/js/jquery.nice-select.js"></script>
+<script src="web/js/mail-script.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="web/js/custom.js"></script>
 
 <script>
     function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {

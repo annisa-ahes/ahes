@@ -17,6 +17,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TransactionRoomReservationController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -98,7 +99,10 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/ad', [HomeController::class, 'aduh'])->name('homeaduh');
+Route::get('/about', [WebController::class, 'about'])->name('web.about');
+Route::get('/contact', [WebController::class, 'contact'])->name('web.contact');
+Route::get('/gallery', [WebController::class, 'gallery'])->name('web.gallery');
+Route::get('/room', [WebController::class, 'room'])->name('web.room');
 
 Route::get('/sendEvent', function () {
     $superAdmins = User::where('role', 'Super')->get();

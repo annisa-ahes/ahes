@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="image/favicon.png" type="image/png">
+    <link rel="icon" href="web/image/favicon.png" type="image/png">
     <title>Al-Istiqamah Hotel - About</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="web/css/bootstrap.css">
@@ -23,7 +23,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -32,11 +32,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="room.html">Type Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-fluid" style="box-shadow: 0px 1px 10px black"; src="image/img/slider/bangunan2.JPG" alt="img">
+                <img class="img-fluid" style="box-shadow: 0px 1px 10px black"; src="web/image/img/slider/bangunan2.JPG" alt="img">
             </div>
         </div>
     </div>
@@ -140,7 +140,7 @@
         </div>
         <div class="testimonial_slider owl-carousel">
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -154,7 +154,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -182,7 +182,7 @@
                 </div>
             </div>
             <div class="media testimonial_item">
-                <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                <img class="rounded-circle" src="web/image/testtimonial-1.jpg" alt="">
                 <div class="media-body">
                     <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
                     <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
@@ -265,16 +265,16 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="web/js/jquery-3.2.1.min.js"></script>
+<script src="web/js/popper.js"></script>
+<script src="web/js/bootstrap.min.js"></script>
+<script src="web/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="web/js/jquery.ajaxchimp.min.js"></script>
+<script src="web/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="web/vendors/nice-select/js/jquery.nice-select.js"></script>
+<script src="web/js/mail-script.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="web/js/custom.js"></script>
 </body>
 </html>

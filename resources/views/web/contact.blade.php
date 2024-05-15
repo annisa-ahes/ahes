@@ -23,7 +23,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -32,11 +32,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="room.html">Type Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -214,26 +214,26 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="vendors/isotope/isotope-min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="web/js/jquery-3.2.1.min.js"></script>
+<script src="web/js/popper.js"></script>
+<script src="web/js/bootstrap.min.js"></script>
+<script src="web/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="web/js/jquery.ajaxchimp.min.js"></script>
+<script src="web/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="web/vendors/nice-select/js/jquery.nice-select.js"></script>
+<script src="web/js/mail-script.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="web/vendors/isotope/isotope-min.js"></script>
+<script src="web/js/stellar.js"></script>
+<script src="web/vendors/lightbox/simpleLightbox.min.js"></script>
 <!--gmaps Js-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="js/gmaps.min.js"></script>
+<script src="web/js/gmaps.min.js"></script>
 <!-- contact js -->
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/custom.js"></script>
+<script src="web/js/jquery.form.js"></script>
+<script src="web/js/jquery.validate.min.js"></script>
+<script src="web/js/contact.js"></script>
+<script src="web/js/custom.js"></script>
 </body>
 </html>
