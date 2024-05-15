@@ -4,8 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="web/image/favicon.png" type="image/png">
-    <title>Al-Istiqamah Hotel - Gallery</title>
+    <link rel="icon" href="web/image/Kementerian_Agama_new_logo.png" type="image/png">
+    <title>Asrama Haji Surabaya - Gallery</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="web/css/bootstrap.css">
     <link rel="stylesheet" href="web/vendors/linericon/style.css">
@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Kementerian_Agama_new_logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -197,7 +197,7 @@
         <div class="border_line"></div>
         <div class="row footer-bottom d-flex justify-content-between align-items-center">
             <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> reserved Hotel Al-Istiqamah | by <span class="header-text"><a href="www.hilfideveloper.com">Hilfideveloper</a></span></a>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> reserved Asrama Haji Surabaya
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             <div class="col-lg-4 col-sm-12 footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>

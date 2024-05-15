@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="{{ asset('web/image/favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('web/image/Kementerian_Agama_new_logo.png') }}" type="image/png">
     <title>Asrama Haji Surabaya</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('web/css/bootstrap.css') }}">
@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Kementerian_Agama_new_logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -51,7 +51,7 @@
         <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
         <div class="container">
             <div class="banner_content text-center">
-                <h6>Hotel Al-Istiqamah</h6>
+                <h6>Asrama Haji Surabaya</h6>
                 <h2 class="header-text">Relax Your Mind</h2>
                 <p>Cukup dengan merogoh kocek mulai dari Rp350.000, Anda sudah bisa mendapat penginapan dengan kualitas mantap tapi harga bersahabat. <br>Hotel ini cocok bagi wisatawan yang ingin jalan-jalan.</p>
                 <a href="#" class="btn theme_btn button_hover">Pesan Sekarang</a>
@@ -218,7 +218,7 @@
     </div>
     <div class="container">
         <div class="section_title text-center">
-            <h2 class="title_w header-text">Al-Istiqamah Facilities</h2>
+            <h2 class="title_w header-text">Asrama Haji Surabaya Facilities</h2>
             <p>Who are in extremely love with eco friendly system.</p>
         </div>
         <div class="row mb_30">
@@ -271,7 +271,7 @@
             <div class="col-md-6 d_flex align-items-center">
                 <div class="about_content ">
                     <h2 class="title title_color header-text">About Us <br>Our History<br>Mission & Vision</h2>
-                    <p>Al-Istiqamah Hotel is one of the Representative hotels in Simpang Empat, West Pasaman Regency which is closest to the City Center, and the West Pasaman Regional Government Complex.
+                    <p>Asrama Haji Surabaya is one of the Representative hotels in Simpang Empat, West Pasaman Regency which is closest to the City Center, and the West Pasaman Regional Government Complex.
                         We provide several types of rooms, including VIP, Deluxe and Superior rooms, the types of rooms that we provide have different atmospheres and characteristics, so it really supports you to feel comfortable in all the rooms we provide.</p>
                     <a href="#" class="button_hover theme_btn_two">Gallery Hotel</a>
                 </div>
@@ -405,7 +405,7 @@
         <div class="border_line"></div>
         <div class="row footer-bottom d-flex justify-content-between align-items-center">
             <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> reserved Hotel Al-Istiqamah | by <span class="header-text"><a href="www.hilfideveloper.com">Hilfideveloper</a></span></a>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> reserved Asrama Haji Surabaya
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             <div class="col-lg-4 col-sm-12 footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
