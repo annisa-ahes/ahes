@@ -28,4 +28,24 @@ class WebController extends Controller
     {
         return view('web.about');
     }
+
+    public function booking()
+    {
+        return view('web.booking');
+    }
+
+    public function bookingRoom()
+    {
+        return view('web.bookingRoom');
+    }
+
+    public function bookingHall()
+    {
+        return view('web.bookingHall');
+    }
+
+    public function bookingDetails()
+    {
+        return view('web.bookingRoomDetails');
+    }
 }

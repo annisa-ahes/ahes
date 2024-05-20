@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="web/image/Kementerian_Agama_new_logo.png" type="image/png">
-    <title>Asrama Haji Surabaya - Contact</title>
+    <title>Asrama Haji Surabaya - Pemesanan</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="web/css/bootstrap.css">
     <link rel="stylesheet" href="web/vendors/linericon/style.css">
@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,72 +49,51 @@
     <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
     <div class="container">
         <div class="page-cover text-center">
-            <h2 class="page-cover-tittle">Contact Us</h2>
+            <h2 class="page-cover-tittle">Pemesanan</h2>
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li class="active">Contact Us</li>
+                <li class="active">Pemesanan</li>
             </ol>
         </div>
     </div>
 </section>
 <!--================Breadcrumb Area =================-->
 
-<!--================Contact Area =================-->
-<section class="contact_area section_gap">
+<!--================ Booking Area  =================-->
+<section class="accomodation_area section_gap">
     <div class="container">
-        <div class="section_title text-center">
-            <h2 class="title_color header-text">Maps in the hotel</h2>
-        </div>
-        <div class="mb-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8156660.456179673!2d99.19359649642541!3d-3.412372749421002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302a7c6d7c8dfca5%3A0xbd3da98fbaf3e7ef!2sHotel%20Al%20-Istiqomah!5e0!3m2!1sid!2sid!4v1652864755283!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="contact_info">
-                    <div class="info_item">
-                        <i class="lnr lnr-home"></i>
-                        <h6>Simpang Ampek, Pasaman Barat,</h6>
-                        <p>Sumatra Barat</p>
+        <div class="row mb_30 justify-content-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="accomodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="web/image/banner/superior/kamarsuperior.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <a href="{{ route('web.bookingRoom') }}" class="btn theme_btn button_hover">Kamar</a>
                     </div>
-                    <div class="info_item">
-                        <i class="lnr lnr-phone-handset"></i>
-                        <h6>Lingkuang Aua, Kec. Pasaman,</h6>
-                        <p>Kabupaten Pasaman Barat, Sumatera Barat 26566</p>
-                    </div>
-                    <div class="info_item">
-                        <i class="lnr lnr-envelope"></i>
-                        <h6><a href="#">alistiqamah@gmail.com</a></h6>
-                        <p>Send us your query anytime!</p>
-                    </div>
+                    <a href="{{ route('web.bookingRoom') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Kamar</h4></a>
                 </div>
             </div>
-            <div class="col-md-9">
-                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                        </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="accomodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="web/image/056-hall.jpeg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <a href="{{ route('web.bookingHall') }}" class="btn theme_btn button_hover">Hall</a>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                        </div>
+                    <a href="{{ route('web.bookingHall') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Hall</h4></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="accomodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="web/image/IMG-20190503-WA0050.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <a href="#" class="btn theme_btn button_hover">Manasik</a>
                     </div>
-                    <div class="col-md-12 text-right">
-                        <button type="submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
-                    </div>
-                </form>
+                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Manasik</h4></a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!--================Contact Area =================-->
+<!--================ Booking Area  =================-->
 
 <!--================ start footer Area  =================-->
 <footer class="footer-area section_gap">
@@ -179,39 +158,6 @@
 <!--================ End footer Area  =================-->
 
 
-<!--================Contact Success and Error message Area =================-->
-<div id="success" class="modal modal-message fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="fa fa-close"></i>
-                </button>
-                <h2>Thank you</h2>
-                <p>Your message is successfully sent...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modals error -->
-
-<div id="error" class="modal modal-message fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="fa fa-close"></i>
-                </button>
-                <h2>Sorry !</h2>
-                <p> Something went wrong </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--================End Contact Success and Error message Area =================-->
-
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="web/js/jquery-3.2.1.min.js"></script>
@@ -227,13 +173,6 @@
 <script src="web/vendors/isotope/isotope-min.js"></script>
 <script src="web/js/stellar.js"></script>
 <script src="web/vendors/lightbox/simpleLightbox.min.js"></script>
-<!--gmaps Js-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="web/js/gmaps.min.js"></script>
-<!-- contact js -->
-<script src="web/js/jquery.form.js"></script>
-<script src="web/js/jquery.validate.min.js"></script>
-<script src="web/js/contact.js"></script>
 <script src="web/js/custom.js"></script>
 </body>
 </html>
