@@ -106,7 +106,8 @@ Route::get('/room', [WebController::class, 'room'])->name('web.room');
 Route::get('/booking', [WebController::class, 'booking'])->name('web.booking');
 Route::get('/booking/room', [WebController::class, 'bookingRoom'])->name('web.bookingRoom');
 Route::get('/booking/hall', [WebController::class, 'bookingHall'])->name('web.bookingHall');
-Route::get('/booking/room/1', [WebController::class, 'bookingDetails'])->name('web.bookingRoomDetails');
+Route::get('/booking/room/1', [WebController::class, 'bookingRoomDetails'])->name('web.bookingRoomDetails');
+Route::get('/booking/hall/1', [WebController::class, 'bookingHallDetails'])->name('web.bookingHallDetails');
 
 Route::get('/sendEvent', function () {
     $superAdmins = User::where('role', 'Super')->get();

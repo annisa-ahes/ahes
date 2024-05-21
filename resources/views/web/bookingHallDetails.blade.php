@@ -59,16 +59,27 @@
 </section>
 <!--================Breadcrumb Area =================-->
 
-<!-- Rooms Section Begin -->
-<section class="rooms-section spad">
+<!-- Room Details Section Begin -->
+<section class="room-details-section spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-1.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall Shofa</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
+            <div class="col-lg-8">
+                <div class="room-details-item">
+                    <img src="{{ URL::asset('web/image/hall/hall-1.jpg') }}" width="680" height="350" alt="">
+                    <div class="rd-text">
+                        <div class="rd-title">
+                            <h3>Hall Shofa</h3>
+                            <div class="rdt-right">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Rp. 5.000.000<span>/hari</span></h2>
                         <table>
                             <tbody>
                             <tr>
@@ -85,151 +96,51 @@
                             </tr>
                             </tbody>
                         </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
+                        <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
+                            advantages and disadvantages of both, so you will be confident when purchasing an RV.
+                            When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
+                            wheeler? The advantages and disadvantages of both are studied so that you can make your
+                            choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
+                            achievement of a lifetime. It can be similar to sojourning with your residence as you
+                            search the various sites of our great land, America.</p>
+                        <p>The two commonly known recreational vehicle classes are the motorized and towable.
+                            Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth
+                            wheel has the attraction of getting towed by a pickup or a car, thus giving the
+                            adaptability of possessing transportation for you when you are parked at your campsite.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-2.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall Bir Ali</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>1000 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>AC, Sound System</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-3.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall Muzdalifah</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>1000 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>AC, Sound System</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-4.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall C</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>1000 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>AC, Sound System</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-5.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall Zam-Zam</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>1000 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>AC, Sound System</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/hall/hall-6.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Hall Mina</h4>
-                        <h3>Rp. 5.000.000<span>/hari</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>1000 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>AC, Sound System</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingHallDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="room-pagination">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">Next <i class="fa fa-long-arrow-right"></i></a>
+            <div class="col-lg-4">
+                <div class="room-booking">
+                    <h3>Your Reservation</h3>
+                    <form action="#">
+                        <div class="check-date">
+                            <label for="date-in">Tanggal Acara:</label>
+                            <input type="date" class="date-input" id="date-in">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="select-option">
+                            <label for="guest">Guests:</label>
+                            <select id="guest">
+                                <option value="">1000 Orang</option>
+                            </select>
+                        </div>
+                        <div class="select-option">
+                            <label for="room">Pemakaian:</label>
+                            <select id="room">
+                                <option value="">8 Jam</option>
+                                <option value="">12 Jam</option>
+                            </select>
+                        </div>
+                        <button type="submit">Check Availability</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Rooms Section End -->
+<!-- Room Details Section End -->
 
 <!--================ start footer Area  =================-->
 <footer class="footer-area section_gap">
@@ -292,7 +203,6 @@
     </div>
 </footer>
 <!--================ End footer Area  =================-->
-
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
