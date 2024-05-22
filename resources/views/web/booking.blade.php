@@ -34,7 +34,8 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+{{--                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>--}}
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.booking') }}">Booking</a>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
@@ -85,9 +86,9 @@
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
                         <img src="web/image/IMG-20190503-WA0050.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
-                        <a href="#" class="btn theme_btn button_hover">Manasik</a>
+                        <a href="{{ route('web.bookingManasik') }}" class="btn theme_btn button_hover">Manasik</a>
                     </div>
-                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Manasik</h4></a>
+                    <a href="{{ route('web.bookingManasik') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Manasik</h4></a>
                 </div>
             </div>
         </div>

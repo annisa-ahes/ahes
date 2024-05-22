@@ -3735,6 +3735,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #19191a;
     margin-bottom: 30px;
 }
+.room-booking .input-guest {
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.room-booking .input-guest .right {
+    position: relative;
+    float: right;
+}
 .room-booking form .check-date {
     position: relative;
     margin-bottom: 15px;

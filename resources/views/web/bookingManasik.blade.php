@@ -34,7 +34,7 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
-{{--                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>--}}
+                    {{--                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>--}}
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.booking') }}">Booking</a>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
@@ -66,10 +66,10 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="room-details-item">
-                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="680" height="350" alt="">
+                    <img src="{{ URL::asset('web/image/IMG-20190503-WA0050.jpg') }}" width="680" height="350" alt="">
                     <div class="rd-text">
                         <div class="rd-title">
-                            <h3>Premium King Room</h3>
+                            <h3>Manasik Haji</h3>
                             <div class="rdt-right">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -80,27 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>Rp. 300.000<span>/malam</span></h2>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>5 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <h2>Rp. 5.000 - Rp. 10.000<span>/orang</span></h2>
                         <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
                             advantages and disadvantages of both, so you will be confident when purchasing an RV.
                             When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
@@ -121,26 +101,17 @@
                     <h3>Your Reservation</h3>
                     <form action="#">
                         <div class="check-date">
-                            <label for="date-in">Check In:</label>
+                            <label for="date-in">Tanggal Acara:</label>
                             <input type="date" class="date-input" id="date-in">
                             <i class="icon_calendar"></i>
                         </div>
-                        <div class="check-date">
-                            <label for="date-out">Check Out:</label>
-                            <input type="date" class="date-input" id="date-out">
-                            <i class="icon_calendar"></i>
-                        </div>
-                        <div class="select-option">
-                            <label for="guest">Guests:</label>
-                            <select id="guest">
-                                <option value="">3 Adults</option>
-                            </select>
-                        </div>
-                        <div class="select-option">
-                            <label for="room">Room:</label>
-                            <select id="room">
-                                <option value="">1 Room</option>
-                            </select>
+                        <div class="input-guest">
+                            <label for="guest">Dewasa:</label>
+                            <input type="number" id="quantity" name="quantity" min="0" placeholder="0">
+                            <div class="right">
+                                <label for="guest">Anak-anak:</label>
+                                <input type="number" id="quantity" name="quantity" min="0" placeholder="0">
+                            </div>
                         </div>
                         <button type="submit">Check Availability</button>
                     </form>

@@ -35,7 +35,8 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>
+{{--                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>--}}
+                    <li class="nav-item"><a class="nav-link" href="{{ route('web.booking') }}">Booking</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.gallery') }}">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.contact') }}">Contact</a></li>
                 </ul>
@@ -130,11 +131,95 @@
 </section>
 <!--================Banner Area =================-->
 
-<!--================ Accomodation Area  =================-->
+{{--<!--================ Accomodation Area  =================-->--}}
+{{--<section class="accomodation_area section_gap">--}}
+{{--    <div class="container">--}}
+{{--        <div class="section_title text-center">--}}
+{{--            <h2 class="title_color header-text">Room Type</h2>--}}
+{{--            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </p>--}}
+{{--        </div>--}}
+{{--        <div class="row mb_30 justify-content-center">--}}
+{{--            <div class="col-lg-4 col-sm-6">--}}
+{{--                <div class="accomodation_item text-center">--}}
+{{--                    <div class="hotel_img">--}}
+{{--                        <img src="web/image/banner/superior/kamarsuperior.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">--}}
+{{--                        <a href="#" class="btn theme_btn button_hover">Book Now</a>--}}
+{{--                    </div>--}}
+{{--                    <div class="d-flex justify-content-between facilitas-show">--}}
+{{--                        <div class="details-container">--}}
+{{--                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK MANDI','success',true,true,'pageMessages1');">--}}
+{{--                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div id="pageMessages1">--}}
+
+{{--                    </div>--}}
+{{--                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Superior Room</h4></a>--}}
+{{--                    <h5>350.000<small>.-/ Malam</small></h5>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-sm-6">--}}
+{{--                <div class="accomodation_item text-center">--}}
+{{--                    <div class="hotel_img">--}}
+{{--                        <img src="web/image/banner/delux/deluxedoubel.jpg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">--}}
+{{--                        <a href="#" class="btn theme_btn button_hover">Book Now</a>--}}
+{{--                    </div>--}}
+{{--                    <div class="d-flex justify-content-between facilitas-show">--}}
+{{--                        <div class="details-container">--}}
+{{--                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages2');">--}}
+{{--                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div id="pageMessages2">--}}
+
+{{--                    </div>--}}
+{{--                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Deluxe Room</h4></a>--}}
+{{--                    <h5>435.000<small>.-/ Malam</small></h5>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-sm-6">--}}
+{{--                <div class="accomodation_item text-center">--}}
+{{--                    <div class="hotel_img">--}}
+{{--                        <img src="web/image/banner/vip/fasilitasvip.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">--}}
+{{--                        <a href="#" class="btn theme_btn button_hover">Book Now</a>--}}
+{{--                    </div>--}}
+{{--                    <div class="d-flex justify-content-between facilitas-show">--}}
+{{--                        <div class="details-container">--}}
+{{--                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="details-container" id="facilitas" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC HOT WATER REFRIGERATOR / KULKAS TV CHANEL WASTAPEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages3');">--}}
+{{--                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">--}}
+{{--                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div id="pageMessages3">--}}
+
+{{--                    </div>--}}
+{{--                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">VIP Room</h4></a>--}}
+{{--                    <h5>495.000<small>.-/ Malam</small></h5>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
+{{--<!--================ Accomodation Area  =================-->--}}
+
+<!--================ Facilities Area  =================-->
+
+<!--================ Booking Area  =================-->
 <section class="accomodation_area section_gap">
     <div class="container">
         <div class="section_title text-center">
-            <h2 class="title_color header-text">Room Type</h2>
+            <h2 class="title_color header-text">Pemesanan</h2>
             <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </p>
         </div>
         <div class="row mb_30 justify-content-center">
@@ -142,77 +227,34 @@
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
                         <img src="web/image/banner/superior/kamarsuperior.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        <a href="{{ route('web.bookingRoom') }}" class="btn theme_btn button_hover">Kamar</a>
                     </div>
-                    <div class="d-flex justify-content-between facilitas-show">
-                        <div class="details-container">
-                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
-                        </div>
-                        <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK MANDI','success',true,true,'pageMessages1');">
-                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>
-                        </div>
-                    </div>
-                    <div id="pageMessages1">
-
-                    </div>
-                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Superior Room</h4></a>
-                    <h5>350.000<small>.-/ Malam</small></h5>
+                    <a href="{{ route('web.bookingRoom') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Kamar</h4></a>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img src="web/image/banner/delux/deluxedoubel.jpg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        <img src="web/image/056-hall.jpeg"  alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <a href="{{ route('web.bookingHall') }}" class="btn theme_btn button_hover">Hall</a>
                     </div>
-                    <div class="d-flex justify-content-between facilitas-show">
-                        <div class="details-container">
-                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
-                        </div>
-                        <div class="details-container" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC TV CHANEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages2');">
-                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>
-                        </div>
-                    </div>
-                    <div id="pageMessages2">
-
-                    </div>
-                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">Deluxe Room</h4></a>
-                    <h5>435.000<small>.-/ Malam</small></h5>
+                    <a href="{{ route('web.bookingHall') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Hall</h4></a>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img src="web/image/banner/vip/fasilitasvip.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        <img src="web/image/IMG-20190503-WA0050.jpg" alt="" width="270" height="270" style="border-radius: 20px; box-shadow: 2px 1px 10px rgb(211, 211, 211);">
+                        <a href="{{ route('web.bookingManasik') }}" class="btn theme_btn button_hover">Manasik</a>
                     </div>
-                    <div class="d-flex justify-content-between facilitas-show">
-                        <div class="details-container">
-                            <img src="web/image/check-square.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">2/3/4 Persons</p>
-                        </div>
-                        <div class="details-container" id="facilitas" style="cursor: pointer;"  onclick="createAlert('','Perlengkapan','AIR CONDITIONING/ AC HOT WATER REFRIGERATOR / KULKAS TV CHANEL WASTAPEL WELLCOME DRINK PERLENGKAPAN MANDI','success',true,true,'pageMessages3');">
-                            <img src="web/image/svgviewer-output.svg" alt="tick" class="list-icon">
-                            <p class="list-text" style="font-size: 13px;">Show Facilities</p>
-                        </div>
-                    </div>
-                    <div id="pageMessages3">
-
-                    </div>
-                    <a href="#"><h4 class="sec_h4 header-text" style="font-size: 24px;">VIP Room</h4></a>
-                    <h5>495.000<small>.-/ Malam</small></h5>
+                    <a href="{{ route('web.bookingManasik') }}"><h4 class="sec_h4 header-text" style="font-size: 24px;">Pemesanan Manasik</h4></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--================ Accomodation Area  =================-->
+<!--================ Booking Area  =================-->
 
-<!--================ Facilities Area  =================-->
 <section class="facilities_area section_gap">
     <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
     </div>

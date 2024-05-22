@@ -44,6 +44,11 @@ class WebController extends Controller
         return view('web.bookingHall');
     }
 
+    public function bookingManasik()
+    {
+        return view('web.bookingManasik');
+    }
+
     public function bookingRoomDetails()
     {
         return view('web.bookingRoomDetails');
