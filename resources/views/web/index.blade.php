@@ -55,79 +55,79 @@
                 <h6>Asrama Haji Surabaya</h6>
                 <h2 class="header-text">Relax Your Mind</h2>
                 <p>Cukup dengan merogoh kocek mulai dari Rp350.000, Anda sudah bisa mendapat penginapan dengan kualitas mantap tapi harga bersahabat. <br>Hotel ini cocok bagi wisatawan yang ingin jalan-jalan.</p>
-                <a href="#" class="btn theme_btn button_hover">Pesan Sekarang</a>
+                <a href="{{ route('web.booking') }}" class="btn theme_btn button_hover">Pesan Sekarang</a>
             </div>
         </div>
     </div>
-    <div class="hotel_booking_area position">
-        <div class="container">
-            <div class="hotel_booking_table">
-                <div class="col-md-3">
-                    <h2>Book<br> Your Room</h2>
-                </div>
-                <div class="col-md-9">
-                    <div class="boking_table">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker11'>
-                                            <input type='text' class="form-control" placeholder="Checkin Date"/>
-                                            <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" placeholder="Checkout Date"/>
-                                            <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Adult Peoples">Adult Peoples</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Child">Child</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Class Rooms">Number of Rooms</option>
-                                            <option value="1">Superior</option>
-                                            <option value="2">Deluxe</option>
-                                            <option value="3">VIP</option>
-                                        </select>
-                                    </div>
-                                    <a class="book_now_btn button_hover" href="#">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="hotel_booking_area position">--}}
+{{--        <div class="container">--}}
+{{--            <div class="hotel_booking_table">--}}
+{{--                <div class="col-md-3">--}}
+{{--                    <h2>Book<br> Your Room</h2>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-9">--}}
+{{--                    <div class="boking_table">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="book_tabel_item">--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <div class='input-group date' id='datetimepicker11'>--}}
+{{--                                            <input type='text' class="form-control" placeholder="Checkin Date"/>--}}
+{{--                                            <span class="input-group-addon">--}}
+{{--                                                        <i class="fa fa-calendar" aria-hidden="true"></i>--}}
+{{--                                                    </span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <div class='input-group date' id='datetimepicker1'>--}}
+{{--                                            <input type='text' class="form-control" placeholder="Checkout Date"/>--}}
+{{--                                            <span class="input-group-addon">--}}
+{{--                                                        <i class="fa fa-calendar" aria-hidden="true"></i>--}}
+{{--                                                    </span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="book_tabel_item">--}}
+{{--                                    <div class="input-group">--}}
+{{--                                        <select class="wide">--}}
+{{--                                            <option data-display="Adult Peoples">Adult Peoples</option>--}}
+{{--                                            <option value="1">1</option>--}}
+{{--                                            <option value="2">2</option>--}}
+{{--                                            <option value="3">3</option>--}}
+{{--                                        </select>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="input-group">--}}
+{{--                                        <select class="wide">--}}
+{{--                                            <option data-display="Child">Child</option>--}}
+{{--                                            <option value="1">1</option>--}}
+{{--                                            <option value="2">2</option>--}}
+{{--                                            <option value="3">3</option>--}}
+{{--                                            <option value="4">4</option>--}}
+{{--                                        </select>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="book_tabel_item">--}}
+{{--                                    <div class="input-group">--}}
+{{--                                        <select class="wide">--}}
+{{--                                            <option data-display="Class Rooms">Number of Rooms</option>--}}
+{{--                                            <option value="1">Superior</option>--}}
+{{--                                            <option value="2">Deluxe</option>--}}
+{{--                                            <option value="3">VIP</option>--}}
+{{--                                        </select>--}}
+{{--                                    </div>--}}
+{{--                                    <a class="book_now_btn button_hover" href="#">Book Now</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </section>
 <!--================Banner Area =================-->
 
