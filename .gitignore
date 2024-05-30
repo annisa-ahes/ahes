@@ -15,5 +15,7 @@ yarn-error.log
 /public/css/app.css
 /public/js/app.js
 /public/js/app.js.LICENSE.txt
+.idea/php.xml
+.idea/phpunit.xml
 
 /public/build
