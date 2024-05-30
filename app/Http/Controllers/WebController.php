@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Interface\RoomRepositoryInterface;
+
 class WebController extends Controller
 {
+    public function __construct(
+        private RoomRepositoryInterface $roomRepository
+    ) {
+    }
     public function index()
     {
         return view('web.index');
@@ -36,7 +42,8 @@ class WebController extends Controller
 
     public function bookingRoom()
     {
-        return view('web.bookingRoom');
+        $rooms = $this->roomRepository->getAllRooms();
+        return view('web.bookingRoom', ['rooms' => $rooms]);
     }
 
     public function bookingHall()

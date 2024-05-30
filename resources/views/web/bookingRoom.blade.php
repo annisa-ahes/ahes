@@ -64,29 +64,31 @@
 <section class="rooms-section spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            @forelse ($rooms as $room)
+                <div class="col-lg-4 col-md-6">
                 <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="270" height="270" alt="">
+{{--                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="270" height="270" alt="">--}}
+                    <img src="{{ $room->firstImage() }}" width="270" height="270" alt="">
                     <div class="ri-text">
-                        <h4>Premium King Room</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
+                        <h4>{{ $room->type->name }}</h4>
+                        <h3>Rp. {{ $room->price }}<span>/malam</span></h3>
                         <table>
                             <tbody>
                             <tr>
                                 <td class="r-o">Size:</td>
-                                <td>30 ft</td>
+                                <td>{{ $room->type->size }} m2</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
+                                <td>{{ $room->capacity }} orang</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
+                                <td>{{ $room->type->bed }}</td>
                             </tr>
                             <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
+                                <td class="r-o">Facilities:</td>
+                                <td>{{ $room->type->facilities }}</td>
                             </tr>
                             </tbody>
                         </table>
@@ -94,163 +96,189 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-2.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Deluxe Room</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-3.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Double Room</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-4.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Luxury Room</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-5.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Room With View</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="room-item">
-                    <img src="{{ URL::asset('web/image/room/room-6.jpg') }}" width="270" height="270" alt="">
-                    <div class="ri-text">
-                        <h4>Small View</h4>
-                        <h3>Rp. 300.000<span>/malam</span></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="r-o">Size:</td>
-                                <td>30 ft</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Capacity:</td>
-                                <td>2 orang</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Bed:</td>
-                                <td>King Beds</td>
-                            </tr>
-                            <tr>
-                                <td class="r-o">Services:</td>
-                                <td>Wifi, Television, Bathroom,...</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="room-pagination">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">Next <i class="fa fa-long-arrow-right"></i></a>
-                </div>
-            </div>
+            @empty
+                <p class="text-center">There's no customer found on database</p>
+            @endforelse
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Premium King Room</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-2.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Deluxe Room</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-3.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Double Room</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-4.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Luxury Room</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-5.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Room With View</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="room-item">--}}
+{{--                    <img src="{{ URL::asset('web/image/room/room-6.jpg') }}" width="270" height="270" alt="">--}}
+{{--                    <div class="ri-text">--}}
+{{--                        <h4>Small View</h4>--}}
+{{--                        <h3>Rp. 300.000<span>/malam</span></h3>--}}
+{{--                        <table>--}}
+{{--                            <tbody>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Size:</td>--}}
+{{--                                <td>30 ft</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Capacity:</td>--}}
+{{--                                <td>2 orang</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Bed:</td>--}}
+{{--                                <td>King Beds</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <td class="r-o">Services:</td>--}}
+{{--                                <td>Wifi, Television, Bathroom,...</td>--}}
+{{--                            </tr>--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </section>
