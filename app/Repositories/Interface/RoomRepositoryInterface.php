@@ -9,4 +9,6 @@ interface RoomRepositoryInterface
     public function getRoomsDatatable($request);
 
     public function getAllRooms();
+
+    public function getRoom($id);
 }

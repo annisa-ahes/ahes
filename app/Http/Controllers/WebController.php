@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Interface\RoomRepositoryInterface;
+use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
@@ -56,9 +57,12 @@ class WebController extends Controller
         return view('web.bookingManasik');
     }
 
-    public function bookingRoomDetails()
+    public function bookingRoomDetails(Request $request, $roomId)
     {
-        return view('web.bookingRoomDetails');
+        $roomDetail = $this->roomRepository->getRoom($roomId);
+
+//        return response()->json(['roomku' => $roomId, 'detail' => $roomDetail]);
+        return view('web.bookingRoomDetails', ['roomDetail' => $roomDetail]);
     }
 
     public function bookingHallDetails()

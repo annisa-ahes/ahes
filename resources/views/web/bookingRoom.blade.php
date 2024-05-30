@@ -92,7 +92,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <a href="{{ route('web.bookingRoomDetails') }}" class="primary-btn">More Details</a>
+                        <a href="{{ route('web.bookingRoomDetails', ['roomId' => $room->id]) }}" class="primary-btn">More Details</a>
                     </div>
                 </div>
             </div>

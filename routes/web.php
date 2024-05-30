@@ -107,7 +107,7 @@ Route::get('/booking', [WebController::class, 'booking'])->name('web.booking');
 Route::get('/booking/room', [WebController::class, 'bookingRoom'])->name('web.bookingRoom');
 Route::get('/booking/hall', [WebController::class, 'bookingHall'])->name('web.bookingHall');
 Route::get('/booking/manasik', [WebController::class, 'bookingManasik'])->name('web.bookingManasik');
-Route::get('/booking/room/1', [WebController::class, 'bookingRoomDetails'])->name('web.bookingRoomDetails');
+Route::get('/booking/room/{roomId}', [WebController::class, 'bookingRoomDetails'])->name('web.bookingRoomDetails');
 Route::get('/booking/hall/1', [WebController::class, 'bookingHallDetails'])->name('web.bookingHallDetails');
 
 Route::get('/sendEvent', function () {

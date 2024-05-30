@@ -107,4 +107,8 @@ class RoomRepository implements RoomRepositoryInterface
     public function getAllRooms() {
         return Room::all();
     }
+
+    public function getRoom($id) {
+        return Room::find($id);
+    }
 }
