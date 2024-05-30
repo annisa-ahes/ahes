@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="web/image/Kementerian_Agama_new_logo.png" alt="" width="65"></a>
+            <a class="navbar-brand logo_h" href="{{ route('web.index') }}"><img src="web/image/Kementerian_Agama_new_logo.png" alt="" width="65"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -33,7 +33,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ route('web.index') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.about') }}">About us</a></li>
 {{--                    <li class="nav-item"><a class="nav-link" href="{{ route('web.room') }}">Type Rooms</a></li>--}}
                     <li class="nav-item"><a class="nav-link" href="{{ route('web.booking') }}">Booking</a></li>

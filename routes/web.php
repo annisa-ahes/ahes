@@ -36,6 +36,9 @@ Route::group(['middleware' => ['auth', 'checkRole:Super']], function () {
     Route::resource('user', UserController::class);
 });
 
+// Main route entry for dashboard
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+
 Route::group(['middleware' => ['auth', 'checkRole:Super,Admin']], function () {
     Route::post('/room/{room}/image/upload', [ImageController::class, 'store'])->name('image.store');
     Route::delete('/image/{image}', [ImageController::class, 'destroy'])->name('image.destroy');
@@ -57,30 +60,31 @@ Route::group(['middleware' => ['auth', 'checkRole:Super,Admin']], function () {
     Route::resource('transaction', TransactionController::class);
     Route::resource('facility', FacilityController::class);
 
-    Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
-    Route::get('/payment/{payment}/invoice', [PaymentController::class, 'invoice'])->name('payment.invoice');
+    Route::get('/dashboard/payment', [PaymentController::class, 'index'])->name('payment.index');
+    Route::get('/dashboard/payment/{payment}/invoice', [PaymentController::class, 'invoice'])->name('payment.invoice');
 
-    Route::get('/transaction/{transaction}/payment/create', [PaymentController::class, 'create'])->name('transaction.payment.create');
-    Route::post('/transaction/{transaction}/payment/store', [PaymentController::class, 'store'])->name('transaction.payment.store');
+    Route::get('/dashboard/transaction/{transaction}/payment/create', [PaymentController::class, 'create'])->name('transaction.payment.create');
+    Route::post('/dashboard/transaction/{transaction}/payment/store', [PaymentController::class, 'store'])->name('transaction.payment.store');
 
-    Route::get('/get-dialy-guest-chart-data', [ChartController::class, 'dailyGuestPerMonth']);
-    Route::get('/get-dialy-guest/{year}/{month}/{day}', [ChartController::class, 'dailyGuest'])->name('chart.dailyGuest');
+    Route::get('/dashboard/get-dialy-guest-chart-data', [ChartController::class, 'dailyGuestPerMonth']);
+    Route::get('/dashboard/get-dialy-guest/{year}/{month}/{day}', [ChartController::class, 'dailyGuest'])->name('chart.dailyGuest');
 });
 
+// Dashboard routes
 Route::group(['middleware' => ['auth', 'checkRole:Super,Admin,Customer']], function () {
     Route::resource('user', UserController::class)->only([
         'show',
     ]);
 
-    Route::view('/notification', 'notification.index')->name('notification.index');
+    Route::view('/dashboard/notification', 'notification.index')->name('notification.index');
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/dashboard/index', [DashboardController::class, 'index'])->name('dashboard.index');
 
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/dashboard/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/mark-all-as-read', [NotificationsController::class, 'markAllAsRead'])->name('notification.markAllAsRead');
+    Route::get('/dashboard/mark-all-as-read', [NotificationsController::class, 'markAllAsRead'])->name('notification.markAllAsRead');
 
-    Route::get('/notification-to/{id}', [NotificationsController::class, 'routeTo'])->name('notification.routeTo');
+    Route::get('/dashboard/notification-to/{id}', [NotificationsController::class, 'routeTo'])->name('notification.routeTo');
 });
 
 // Login routes
@@ -98,11 +102,11 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('password.update');
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [WebController::class, 'index'])->name('web.index');
 Route::get('/about', [WebController::class, 'about'])->name('web.about');
 Route::get('/contact', [WebController::class, 'contact'])->name('web.contact');
 Route::get('/gallery', [WebController::class, 'gallery'])->name('web.gallery');
-Route::get('/room', [WebController::class, 'room'])->name('web.room');
+Route::get('/rooms', [WebController::class, 'room'])->name('web.room');
 Route::get('/booking', [WebController::class, 'booking'])->name('web.booking');
 Route::get('/booking/room', [WebController::class, 'bookingRoom'])->name('web.bookingRoom');
 Route::get('/booking/hall', [WebController::class, 'bookingHall'])->name('web.bookingHall');

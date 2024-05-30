@@ -11,7 +11,7 @@ $(function () {
         },
 
         ajaxGetdailyGuestPerMonthData: function () {
-            const urlPath = "/get-dialy-guest-chart-data";
+            const urlPath = "/dashboard/get-dialy-guest-chart-data";
             const request = $.ajax({
                 method: "GET",
                 url: urlPath,
