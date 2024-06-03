@@ -16,6 +16,7 @@
     <!-- main css -->
     <link rel="stylesheet" href="{{ URL::asset('web/css/style.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('web/css/responsive.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 <!--================Header Area =================-->
@@ -111,7 +112,9 @@
                     <form action="#">
                         <div class="check-date">
                             <label for="date-in">Check In:</label>
-                            <input type="date" class="date-input" id="date-in">
+{{--                            <input type="date" class="date-input" id="date-in">--}}
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            <input type="text" name="daterange" value="01/01/2023 - 01/31/2023" />
                             <i class="icon_calendar"></i>
                         </div>
                         <div class="check-date">
