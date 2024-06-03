@@ -4,7 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import "./bootstrap";
-import "../css/app.css";
+import './daterangepicker-init';
+import '../css/app.css';
 
 // window.Vue = require('vue').default;
 /**
