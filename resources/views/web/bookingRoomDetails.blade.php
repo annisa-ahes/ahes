@@ -111,7 +111,7 @@
                     <form action="#">
                         <div class="check-date">
                             <label for="date-in">Check In:</label>
-                            <input type="date" class="date-input" id="date-in">
+                            <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">
                             <i class="icon_calendar"></i>
                         </div>
                         <div class="check-date">
@@ -122,13 +122,17 @@
                         <div class="select-option">
                             <label for="guest">Guests:</label>
                             <select id="guest">
-                                <option value="">3 Adults</option>
+                                @for ($i = 1; $i <= $roomDetail->capacity; $i++)
+                                    <option value="{{ $i }}">{{ $i }} Orang</option>
+                            @endfor
                             </select>
                         </div>
                         <div class="select-option">
                             <label for="room">Room:</label>
                             <select id="room">
-                                <option value="">1 Room</option>
+                                @for ($i = 1; $i <= 8; $i++)
+                                    <option value="{{ $i }}">{{ $i }} Room</option>
+                                @endfor
                             </select>
                         </div>
                         <button type="submit">Check Availability</button>
