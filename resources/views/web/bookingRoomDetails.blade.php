@@ -16,7 +16,10 @@
     <!-- main css -->
     <link rel="stylesheet" href="{{ URL::asset('web/css/style.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('web/css/responsive.css') }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- Run Vite script -->
+    @vite(['resources/js/app.js'])
 </head>
 <body>
 <!--================Header Area =================-->
@@ -114,8 +117,7 @@
                             <label for="date-in">Check In:</label>
                             <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">
 {{--                            <input type="date" class="date-input" id="date-in">--}}
-                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
-                            <input type="text" name="daterange" value="01/01/2023 - 01/31/2023" />
+                            <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />
                             <i class="icon_calendar"></i>
                         </div>
                         <div class="check-date">
