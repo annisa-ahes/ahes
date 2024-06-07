@@ -11,4 +11,8 @@ interface TypeRepositoryInterface
     public function store($typeData);
 
     public function getTypeList($request);
+
+    public function getAllTypeRooms();
+
+    public function getTypeRoomById($id);
 }

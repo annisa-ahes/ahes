@@ -64,35 +64,35 @@
 <section class="rooms-section spad">
     <div class="container">
         <div class="row">
-            @forelse ($rooms as $room)
+            @forelse ($roomTypes as $roomType)
                 <div class="col-lg-4 col-md-6">
                 <div class="room-item">
 {{--                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="270" height="270" alt="">--}}
-                    <img src="{{ $room->firstImage() }}" width="270" height="270" alt="">
+{{--                    <img src="{{ $roomType->firstImage() }}" width="270" height="270" alt="">--}}
                     <div class="ri-text">
-                        <h4>{{ $room->type->name }}</h4>
-                        <h3>Rp. {{ $room->price }}<span>/malam</span></h3>
+                        <h4>{{ $roomType->name }}</h4>
+                        <h3>Rp. {{ $roomType->price }}<span>/malam</span></h3>
                         <table>
                             <tbody>
                             <tr>
                                 <td class="r-o">Size:</td>
-                                <td>{{ $room->type->size }} m2</td>
+                                <td>{{ $roomType->size }} m2</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Capacity:</td>
-                                <td>{{ $room->capacity }} orang</td>
+                                <td>{{ $roomType->capacity }} orang</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Bed:</td>
-                                <td>{{ $room->type->bed }}</td>
+                                <td>{{ $roomType->bed }}</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Facilities:</td>
-                                <td>{{ $room->type->facilities }}</td>
+                                <td>{{ $roomType->facilities }}</td>
                             </tr>
                             </tbody>
                         </table>
-                        <a href="{{ route('web.bookingRoomDetails', ['roomId' => $room->id]) }}" class="primary-btn">More Details</a>
+                        <a href="{{ route('web.bookingRoomDetails', ['roomTypeId' => $roomType->id]) }}" class="primary-btn">More Details</a>
                     </div>
                 </div>
             </div>

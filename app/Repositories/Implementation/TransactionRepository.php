@@ -7,6 +7,11 @@ use App\Models\Room;
 use App\Models\Transaction;
 use App\Repositories\Interface\TransactionRepositoryInterface;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
+
+/**
+ * @mixin Builder
+ */
 
 class TransactionRepository implements TransactionRepositoryInterface
 {
@@ -41,5 +46,12 @@ class TransactionRepository implements TransactionRepositoryInterface
             })
             ->orderBy('check_out', 'ASC')->paginate(20)
             ->appends($request->all());
+    }
+
+    public function getTransactionCheckInDateByTypeId($typeId)
+    {
+        return Transaction::where(function ($query) use ($typeId) {
+            $query->where('room', '=', $activated);
+        })->get();
     }
 }

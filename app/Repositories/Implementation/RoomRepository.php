@@ -103,12 +103,4 @@ class RoomRepository implements RoomRepositoryInterface
 
         return json_encode($response);
     }
-
-    public function getAllRooms() {
-        return Room::all();
-    }
-
-    public function getRoom($id) {
-        return Room::find($id);
-    }
 }

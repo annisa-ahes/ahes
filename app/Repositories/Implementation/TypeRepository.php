@@ -102,4 +102,12 @@ class TypeRepository implements TypeRepositoryInterface
     {
         return Type::get();
     }
+
+    public function getAllTypeRooms() {
+        return Type::all();
+    }
+
+    public function getTypeRoomById($id) {
+        return Type::find($id);
+    }
 }

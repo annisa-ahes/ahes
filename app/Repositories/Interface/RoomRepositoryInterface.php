@@ -7,8 +7,4 @@ interface RoomRepositoryInterface
     public function getRooms($request);
 
     public function getRoomsDatatable($request);
-
-    public function getAllRooms();
-
-    public function getRoom($id);
 }

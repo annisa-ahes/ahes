@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\Interface\RoomRepositoryInterface;
+use App\Repositories\Interface\TypeRepositoryInterface;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function __construct(
-        private RoomRepositoryInterface $roomRepository
+        private TypeRepositoryInterface $typeRepository
     ) {
     }
     public function index()
@@ -43,8 +43,8 @@ class WebController extends Controller
 
     public function bookingRoom()
     {
-        $rooms = $this->roomRepository->getAllRooms();
-        return view('web.bookingRoom', ['rooms' => $rooms]);
+        $roomTypes = $this->typeRepository->getAllTypeRooms();
+        return view('web.bookingRoom', ['roomTypes' => $roomTypes]);
     }
 
     public function bookingHall()
@@ -57,12 +57,12 @@ class WebController extends Controller
         return view('web.bookingManasik');
     }
 
-    public function bookingRoomDetails(Request $request, $roomId)
+    public function bookingRoomDetails(Request $request, $roomTypeId)
     {
-        $roomDetail = $this->roomRepository->getRoom($roomId);
+        $roomTypeDetail = $this->typeRepository->getTypeRoomById($roomTypeId);
 
 //        return response()->json(['roomku' => $roomId, 'detail' => $roomDetail]);
-        return view('web.bookingRoomDetails', ['roomDetail' => $roomDetail]);
+        return view('web.bookingRoomDetails', ['roomTypeDetail' => $roomTypeDetail]);
     }
 
     public function bookingHallDetails()

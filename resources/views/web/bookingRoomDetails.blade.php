@@ -70,10 +70,10 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="room-details-item">
-                    <img src="{{ $roomDetail->firstImage() }}" width="680" height="350" alt="">
+{{--                    <img src="{{ $roomDetail->firstImage() }}" width="680" height="350" alt="">--}}
                     <div class="rd-text">
                         <div class="rd-title">
-                            <h3>{{ $roomDetail->type->name }}</h3>
+                            <h3>{{ $roomTypeDetail->name }}</h3>
                             <div class="rdt-right">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -84,28 +84,28 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>Rp. {{ $roomDetail->price }}<span>/malam</span></h2>
+                        <h2>Rp. {{ $roomTypeDetail->price }}<span>/malam</span></h2>
                         <table>
                             <tbody>
                             <tr>
                                 <td class="r-o">Size:</td>
-                                <td>{{ $roomDetail->type->size }} m2</td>
+                                <td>{{ $roomTypeDetail->size }} m2</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Capacity:</td>
-                                <td>{{ $roomDetail->capacity }} orang</td>
+                                <td>{{ $roomTypeDetail->capacity }} orang</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Bed:</td>
-                                <td>{{ $roomDetail->type->bed }}</td>
+                                <td>{{ $roomTypeDetail->bed }}</td>
                             </tr>
                             <tr>
                                 <td class="r-o">Facilities:</td>
-                                <td>{{ $roomDetail->type->facilities }}</td>
+                                <td>{{ $roomTypeDetail->facilities }}</td>
                             </tr>
                             </tbody>
                         </table>
-                        <p class="f-para">{{ $roomDetail->type->information }}</p>
+                        <p class="f-para">{{ $roomTypeDetail->information }}</p>
                     </div>
                 </div>
             </div>
@@ -114,21 +114,21 @@
                     <h3>Your Reservation</h3>
                     <form action="#">
                         <div class="check-date">
-                            <label for="date-in">Check In:</label>
-                            <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">
+                            <label for="date-in">Check In - Check Out:</label>
+{{--                            <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">--}}
 {{--                            <input type="date" class="date-input" id="date-in">--}}
                             <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />
                             <i class="icon_calendar"></i>
                         </div>
-                        <div class="check-date">
-                            <label for="date-out">Check Out:</label>
-                            <input type="date" class="date-input" id="date-out">
-                            <i class="icon_calendar"></i>
-                        </div>
+{{--                        <div class="check-date">--}}
+{{--                            <label for="date-out">Check Out:</label>--}}
+{{--                            <input type="date" class="date-input" id="date-out">--}}
+{{--                            <i class="icon_calendar"></i>--}}
+{{--                        </div>--}}
                         <div class="select-option">
                             <label for="guest">Guests:</label>
                             <select id="guest">
-                                @for ($i = 1; $i <= $roomDetail->capacity; $i++)
+                                @for ($i = 1; $i <= $roomTypeDetail->capacity; $i++)
                                     <option value="{{ $i }}">{{ $i }} Orang</option>
                             @endfor
                             </select>
