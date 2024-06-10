@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="room-details-item">
-{{--                    <img src="{{ $roomDetail->firstImage() }}" width="680" height="350" alt="">--}}
+                    <img src="{{ $roomTypeDetail->firstImage() }}" width="680" height="350" alt="">
                     <div class="rd-text">
                         <div class="rd-title">
                             <h3>{{ $roomTypeDetail->name }}</h3>

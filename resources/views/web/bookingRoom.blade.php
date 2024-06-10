@@ -68,7 +68,7 @@
                 <div class="col-lg-4 col-md-6">
                 <div class="room-item">
 {{--                    <img src="{{ URL::asset('web/image/room/room-1.jpg') }}" width="270" height="270" alt="">--}}
-{{--                    <img src="{{ $roomType->firstImage() }}" width="270" height="270" alt="">--}}
+                    <img src="{{ $roomType->firstImage() }}" width="270" height="270" alt="">
                     <div class="ri-text">
                         <h4>{{ $roomType->name }}</h4>
                         <h3>Rp. {{ $roomType->price }}<span>/malam</span></h3>

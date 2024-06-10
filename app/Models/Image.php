@@ -11,6 +11,7 @@ class Image extends Model
 
     protected $fillable = [
         'room_id',
+        'type_id',
         'url',
     ];
 
@@ -19,8 +20,18 @@ class Image extends Model
         return $this->belongsTo(Room::class);
     }
 
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
     public function getRoomImage()
     {
         return asset('img/room/'.$this->room->number.'/'.$this->url);
+    }
+
+    public function getTypeImage()
+    {
+        return asset('img/type/'.$this->type->name.'/'.$this->url);
     }
 }
