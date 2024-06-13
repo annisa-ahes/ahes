@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Interface\RoomRepositoryInterface;
+use App\Repositories\Interface\TransactionRepositoryInterface;
 use App\Repositories\Interface\TypeRepositoryInterface;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function __construct(
-        private TypeRepositoryInterface $typeRepository
+        private TypeRepositoryInterface $typeRepository,
+        private RoomRepositoryInterface $roomRepository,
+        private TransactionRepositoryInterface $transactionRepository
     ) {
     }
     public function index()
@@ -60,9 +64,21 @@ class WebController extends Controller
     public function bookingRoomDetails(Request $request, $roomTypeId)
     {
         $roomTypeDetail = $this->typeRepository->getTypeRoomById($roomTypeId);
+        $fullyBookedDates = $this->getDisabledDateByTypeId($roomTypeId);
 
 //        return response()->json(['roomku' => $roomId, 'detail' => $roomDetail]);
-        return view('web.bookingRoomDetails', ['roomTypeDetail' => $roomTypeDetail]);
+        return view('web.bookingRoomDetails', [
+            'roomTypeDetail' => $roomTypeDetail,
+            'fullyBookedDates' => $fullyBookedDates,
+        ]);
+    }
+
+    private function getDisabledDateByTypeId($roomTypeId) {
+        $roomIds = $this->roomRepository->getRoomIdsByTypeId($roomTypeId);
+        $disabledDates = $this->transactionRepository->getDisabledDatesWithRoomIds($roomIds);
+        return $disabledDates->filter(function ($roomIdsForDate) use ($roomIds) {
+            return $roomIdsForDate->sort()->values()->all() === collect($roomIds)->sort()->values()->all();
+        })->keys();
     }
 
     public function bookingHallDetails()

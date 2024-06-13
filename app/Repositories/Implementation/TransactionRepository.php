@@ -7,7 +7,9 @@ use App\Models\Room;
 use App\Models\Transaction;
 use App\Repositories\Interface\TransactionRepositoryInterface;
 use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 /**
  * @mixin Builder
@@ -48,10 +50,36 @@ class TransactionRepository implements TransactionRepositoryInterface
             ->appends($request->all());
     }
 
-    public function getTransactionCheckInDateByTypeId($typeId)
+    public function getDisabledDatesWithRoomIds(array $roomIds): Collection
     {
-        return Transaction::where(function ($query) use ($typeId) {
-            $query->where('room', '=', $activated);
-        })->get();
+        $transactions = Transaction::whereIn('room_id', $roomIds)->get();
+        $disabledDates = collect();
+
+        foreach ($transactions as $transaction) {
+            $checkIn = Carbon::parse($transaction->check_in);
+            $checkOut = Carbon::parse($transaction->check_out);
+
+            // Create a period excluding the check-out date if it's not the next day
+            if ($checkIn->diffInDays($checkOut) > 1) {
+                $period = CarbonPeriod::create($checkIn, $checkOut->subDay());
+            } else {
+                $period = CarbonPeriod::create($checkIn, $checkIn); // Single day period
+            }
+
+            foreach ($period as $date) {
+                $dateString = $date->toDateString();
+                if (!isset($disabledDates[$dateString])) {
+                    $disabledDates[$dateString] = collect();
+                }
+                $disabledDates[$dateString]->push($transaction->room_id);
+            }
+        }
+
+        // Ensure room IDs are unique for each date
+        foreach ($disabledDates as $date => $roomIds) {
+            $disabledDates[$date] = $roomIds->unique();
+        }
+
+        return $disabledDates;
     }
 }

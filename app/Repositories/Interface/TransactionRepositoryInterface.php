@@ -12,4 +12,6 @@ interface TransactionRepositoryInterface
     public function getTransaction($request);
 
     public function getTransactionExpired($request);
+
+    public function getDisabledDatesWithRoomIds(array $roomIds);
 }

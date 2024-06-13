@@ -103,4 +103,8 @@ class RoomRepository implements RoomRepositoryInterface
 
         return json_encode($response);
     }
+
+    public function getRoomIdsByTypeId($typeId) {
+        return Room::where('type_id', $typeId)->pluck('id')->toArray();
+    }
 }

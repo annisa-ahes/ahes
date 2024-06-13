@@ -117,6 +117,12 @@
                             <label for="date-in">Check In - Check Out:</label>
 {{--                            <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">--}}
 {{--                            <input type="date" class="date-input" id="date-in">--}}
+                            <!-- Embed fullyBookedDates into a JavaScript variable -->
+                            <script type="module">
+                                window.Laravel = {
+                                    fullyBookedDates: @json($fullyBookedDates)
+                                };
+                            </script>
                             <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />
                             <i class="icon_calendar"></i>
                         </div>
