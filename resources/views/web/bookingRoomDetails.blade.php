@@ -120,7 +120,10 @@
                             <!-- Embed fullyBookedDates into a JavaScript variable -->
                             <script type="module">
                                 window.Laravel = {
-                                    fullyBookedDates: @json($fullyBookedDates)
+                                    fullyBookedDates: @json($fullyBookedDates),
+                                    availableRoomCounts: @json($availableRoomCounts),
+                                    fullyBookedDatesNew: @json($fullyBookedDatesNew),
+                                    checkoutOnlyDates: @json($checkoutOnlyDates)
                                 };
                             </script>
                             <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />
@@ -142,9 +145,9 @@
                         <div class="select-option">
                             <label for="room">Room:</label>
                             <select id="room">
-                                @for ($i = 1; $i <= 8; $i++)
-                                    <option value="{{ $i }}">{{ $i }} Room</option>
-                                @endfor
+{{--                                @for ($i = 1; $i <= 8; $i++)--}}
+{{--                                    <option value="{{ $i }}">{{ $i }} Room</option>--}}
+{{--                                @endfor--}}
                             </select>
                         </div>
                         <button type="submit">Check Availability</button>
