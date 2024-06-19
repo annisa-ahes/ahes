@@ -50,16 +50,6 @@ class TransactionRepository implements TransactionRepositoryInterface
             ->appends($request->all());
     }
 
-    public function getCheckedOutDateWithRoomIds(array $roomIds): Collection
-    {
-        $transactions = Transaction::whereIn('room_id', $roomIds)
-            ->where(function ($query) {
-                $query->where('check_in', '>=', now())  // Check-in is today or later
-                ->orWhere('check_out', '>=', now()); // Check-out is today or later
-            })->get();
-        return $transactions;
-    }
-
     public function getDisabledDatesWithRoomIds(array $roomIds): Collection
     {
         $transactions = Transaction::whereIn('room_id', $roomIds)->get();

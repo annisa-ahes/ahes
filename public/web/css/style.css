@@ -3834,26 +3834,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 46px;
     margin-top: 30px;
 }
-
-.unavailable-checkout {
-    background: #ff0000 !important;
-    color: #fff !important;
-    text-decoration: line-through;
-    cursor: not-allowed;
-    position: relative;
-}
-
-.unavailable-checkout:hover::after {
-    content: 'Available for checkout only';
-    background: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    padding: 5px;
-    position: absolute;
-    top: -30px; /* Adjusted to fix the tooltip position */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    border-radius: 3px;
-    white-space: nowrap;
-    z-index: 1000;
-}
