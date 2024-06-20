@@ -114,7 +114,7 @@
                     <h3>Your Reservation</h3>
                     <form action="#">
                         <div class="check-date">
-                            <label for="date-in">Check In - Check Out:</label>
+{{--                            <label for="date-in">Check In - Check Out:</label>--}}
 {{--                            <input type="date" class="date-input" id="date-in" min="<?php echo date("Y-m-d"); ?>">--}}
 {{--                            <input type="date" class="date-input" id="date-in">--}}
                             <!-- Embed fullyBookedDates into a JavaScript variable -->
@@ -123,8 +123,17 @@
                                     fullyBookedDates: @json($fullyBookedDates)
                                 };
                             </script>
-                            <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />
-                            <i class="icon_calendar"></i>
+{{--                            <input type="text" name="daterange" value="{{ now()->format('m/d/Y') }} - {{ now()->addDay()->format('m/d/Y') }}" />--}}
+                            <div class="check-date">
+                                <label for="check-in">Check In:</label>
+                                <input type="text" id="check-in" name="check_in" value="{{ now()->format('m/d/Y') }}" />
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="check-out">Check Out:</label>
+                                <input type="text" id="check-out" name="check_out" value="{{ now()->addDay()->format('m/d/Y') }}" />
+                                <i class="icon_calendar"></i>
+                            </div>
                         </div>
 {{--                        <div class="check-date">--}}
 {{--                            <label for="date-out">Check Out:</label>--}}
